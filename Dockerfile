@@ -5,10 +5,8 @@ ARG SERVER_IP
 WORKDIR /work
 COPY . .
 
-RUN apt-get update
-
 # ======= Installs for DNAS responses
-RUN apt-get install -y \
+RUN apt-get update && apt-get install -y \
   libssl-dev ssl-cert php7.0 libapache2-mod-php7.0 \
   wget unzip php7.0-mcrypt libmcrypt-dev \
   && apt-get clean && rm -rf /var/lib/apt/lists/*
@@ -27,7 +25,8 @@ RUN cp ./etc/apache2/sites-available/dnas.conf /etc/apache2/sites-available/dnas
   && ln -sf /proc/self/fd/1 /var/log/apache2/error.log
 
 # ======= Installs for DNS Bind server
-RUN apt-get install bind9 bind9utils bind9-doc dnsutils -y
+RUN apt-get update && apt-get install -y \
+  bind9 bind9utils bind9-doc dnsutils
 
 RUN cp ./dns_files/* /etc/bind/
 
