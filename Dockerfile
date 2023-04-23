@@ -35,7 +35,8 @@ RUN sed -i "s/SERVER_IP/${SERVER_IP}/g" /etc/bind/db.dnas.rpz
 # DNAS Port
 EXPOSE 443
 # DNS Server port
-EXPOSE 53/udp 53/tcp
+EXPOSE 53/tcp
+EXPOSE 53/udp 
 
 ADD ./entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
