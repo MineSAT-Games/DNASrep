@@ -2,4 +2,4 @@
 # Reset the docker image
 docker rmi clank-dnas
 # Pass in the server IP
-docker build --rm --tag clank-dnas --build-arg serverip=${1} .
+docker build --rm --tag clank-dnas --build-arg SERVER_IP=${1} .
