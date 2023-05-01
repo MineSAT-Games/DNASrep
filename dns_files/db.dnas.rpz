@@ -7,11 +7,20 @@ $TTL 60
                           30m)         ; minimum
                    IN     NS    localhost.
 
+; DNAS
 gate1.us.dnas.playstation.org             A      SERVER_IP_US
 gate1.jp.dnas.playstation.org             A      SERVER_IP_JP
 gate1.eu.dnas.playstation.org             A      SERVER_IP_EU
-ratchet3-prod1.pdonline.scea.com          A      SERVER_IP
+
+; SCEE
 randc3-master.online.scee.com             A      SERVER_IP
-nightcrawler.insomniacgames.com           A      SERVER_IP
-ratchet3-pubeta.pdonline.scea.com         A      SERVER_IP
+jakx-palmaster.muis.online.scee.com       A      SERVER_IP
 jakx-palpbtrials.muis.online.scee.com     A      SERVER_IP
+
+; SCEA
+ratchet3-prod1.pdonline.scea.com          A      SERVER_IP
+ratchet3-pubeta.pdonline.scea.com         A      SERVER_IP
+jakx-prod.muis.pdonline.scea.com          A      SERVER_IP
+
+; OTHER
+nightcrawler.insomniacgames.com           A      SERVER_IP
