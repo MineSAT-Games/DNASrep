@@ -3,6 +3,7 @@ FROM ubuntu:16.04
 ARG SERVER_IP_US
 ARG SERVER_IP_JP
 ARG SERVER_IP_EU
+ARG SERVER_IP_BETA
 ARG SERVER_IP
 
 WORKDIR /work
@@ -36,6 +37,7 @@ RUN cp ./dns_files/* /etc/bind/
 RUN sed -i "s/SERVER_IP_US/${SERVER_IP_US:=SERVER_IP}/g" /etc/bind/db.dnas.rpz
 RUN sed -i "s/SERVER_IP_JP/${SERVER_IP_JP:=SERVER_IP}/g" /etc/bind/db.dnas.rpz
 RUN sed -i "s/SERVER_IP_EU/${SERVER_IP_EU:=SERVER_IP}/g" /etc/bind/db.dnas.rpz
+RUN sed -i "s/SERVER_IP_BETA/${SERVER_IP_BETA:=SERVER_IP}/g" /etc/bind/db.dnas.rpz
 RUN sed -i "s/SERVER_IP/${SERVER_IP}/g" /etc/bind/db.dnas.rpz
 
 # DNAS Port

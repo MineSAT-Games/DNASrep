@@ -15,7 +15,7 @@ gate1.eu.dnas.playstation.org             A      SERVER_IP_EU
 ; SCEE
 randc3-master.online.scee.com             A      SERVER_IP
 jakx-palmaster.muis.online.scee.com       A      SERVER_IP
-jakx-palpbtrials.muis.online.scee.com     A      SERVER_IP
+jakx-palpbtrials.muis.online.scee.com     A      SERVER_IP_BETA
 
 ; SCEA
 ratchet3-prod1.pdonline.scea.com          A      SERVER_IP
